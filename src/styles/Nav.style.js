@@ -7,9 +7,15 @@ import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import CloseIcon from "@mui/icons-material/Close";
-
+import {
+  backgroundColor,
+  whiteColor,
+  borderColor,
+  borderColorSecondary,
+  searchColor,
+} from "../styles/colors/Color";
 export const NavContainer = styled.div`
-  background-color: #202020;
+  background-color: ${backgroundColor};
   height: 56px;
   display: flex;
   align-items: center;
@@ -18,11 +24,11 @@ export const NavContainer = styled.div`
   width: 100%;
   overflow: hidden;
   position: sticky;
-  z-index: 100;
+  z-index: 10;
 `;
 
 export const NavSmallContainer = styled.div`
-  background-color: #202020;
+  background-color: ${backgroundColor};
   height: 56px;
   display: flex;
   align-items: center;
@@ -30,13 +36,13 @@ export const NavSmallContainer = styled.div`
   width: 100%;
   overflow: hidden;
   position: sticky;
-  z-index: 100;
+  z-index: 10;
 `;
 
 export const NavLeft = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `;
 export const NavRight = styled.div`
   display: flex;
@@ -71,7 +77,7 @@ export const IconSearchMicConatiner = styled.div`
 `;
 
 export const MenuIcon = styled(Menu)`
-  color: #fff;
+  color: ${whiteColor};
   font-size: 26px !important;
   @media screen and (max-width: 380px) {
     font-size: 20px !important;
@@ -79,15 +85,10 @@ export const MenuIcon = styled(Menu)`
 `;
 export const LogoConatiner = styled.div`
   width: 70px;
-  height: 70px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media screen and (max-width: 376px) {
-    width: 30px;
-    height: 30px;
-  }
 `;
 
 export const Img = styled.img`
@@ -103,7 +104,7 @@ export const Form = styled.form`
   width: 100%;
   height: 40px;
   border-radius: 2px;
-  border: 1px solid hsl(0deg 0% 53% / 40%);
+  border: 1px solid ${borderColor};
   background-color: #121212;
 `;
 
@@ -124,12 +125,12 @@ export const Input = styled.input`
   color: #fff;
 `;
 export const SearchContainer = styled.button`
-  background-color: hsl(0, 0%, 25%);
+  background-color: ${borderColorSecondary};
   border: none;
   outline: none;
   width: 64px;
   height: 100%;
-  color: hsla(0, 100%, 100%, 0.88);
+  color: ${searchColor};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -137,14 +138,14 @@ export const SearchContainer = styled.button`
 `;
 export const SearchBtn = styled(Search)`
   font-size: 26px !important;
-  color: #fff !important;
+  color: ${whiteColor} !important;
   @media screen and (max-width: 380px) {
     font-size: 20px !important;
   }
 `;
 export const CloseIconBtn = styled(CloseIcon)`
   font-size: 26px !important;
-  color: #fff !important;
+  color: ${whiteColor} !important;
   cursor: pointer !important;
 `;
 export const MicContainer = styled.div`
@@ -159,7 +160,7 @@ export const MicContainer = styled.div`
   cursor: pointer;
 `;
 export const MicButton = styled(Mic)`
-  color: #fff !important;
+  color: ${whiteColor} !important;
   @media screen and (max-width: 380px) {
     font-size: 20px !important;
   }
@@ -184,14 +185,14 @@ export const ProfileImage = styled.img`
 `;
 
 export const VideoCallIconBtn = styled(VideoCallIcon)`
-  color: #fff !important;
+  color: ${whiteColor} !important;
   @media screen and (max-width: 380px) {
     font-size: 20px !important;
     margin-left: 0px;
   }
 `;
 export const AppsIconBtn = styled(AppsIcon)`
-  color: #fff !important;
+  color: ${whiteColor} !important;
   @media screen and (max-width: 380px) {
     font-size: 20px !important;
     margin-left: 0px;
@@ -200,14 +201,14 @@ export const AppsIconBtn = styled(AppsIcon)`
 export const NotificationsNoneOutlinedIconBtn = styled(
   NotificationsNoneOutlinedIcon
 )`
-  color: #fff !important;
+  color: ${whiteColor} !important;
   @media screen and (max-width: 380px) {
     font-size: 20px !important;
     margin-left: 0px;
   }
 `;
 export const SearchIconBtn = styled(Search)`
-  color: #fff !important;
+  color: ${whiteColor} !important;
   display: none !important;
   @media screen and (max-width: 773px) {
     display: block !important;
@@ -218,7 +219,7 @@ export const SearchIconBtn = styled(Search)`
   }
 `;
 export const MicIcnButton = styled(Mic)`
-  color: #fff !important;
+  color: ${whiteColor} !important;
   display: none !important;
   @media screen and (max-width: 768px) {
     display: block !important;
@@ -235,5 +236,5 @@ export const BackBtnContainer = styled.div`
   justify-content: center;
 `;
 export const ArrowBackIconbtn = styled(ArrowBackIcon)`
-  color: #fff !important;
+  color: ${whiteColor} !important;
 `;

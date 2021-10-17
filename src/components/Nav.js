@@ -29,11 +29,10 @@ import {
   CloseIconBtn,
 } from "../styles/Nav.style";
 import { IconButton } from "@mui/material";
-const Nav = () => {
+const Nav = ({ showSidebar, setShowSidebar }) => {
   const [changeSearchBar, setChangeSearchBar] = useState(false);
   const [input, setInput] = useState("");
   const [data, setData] = useState([]);
-
   return (
     <>
       {changeSearchBar ? (
@@ -47,7 +46,10 @@ const Nav = () => {
         />
       ) : (
         <NavContainer>
-          <NavBarLeftContainer />
+          <NavBarLeftContainer
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+          />
           <NavMiddle>
             <FormInputContainer
               data={data}
@@ -124,10 +126,10 @@ const FormInputContainer = ({ input, setInput, data, setData }) => {
   );
 };
 
-const NavBarLeftContainer = () => (
+export const NavBarLeftContainer = ({ showSidebar, setShowSidebar }) => (
   <NavLeft>
     <IconConatiner>
-      <IconButton>
+      <IconButton onClick={() => setShowSidebar(!showSidebar)}>
         <MenuIcon />
       </IconButton>
     </IconConatiner>
